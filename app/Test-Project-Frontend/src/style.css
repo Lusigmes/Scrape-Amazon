@@ -1,0 +1,135 @@
+#header-container {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#header-container h1 {
+  font-size: 2.8rem;       
+  font-weight: 700;         
+  color: #333;             
+  text-align: center;      
+  margin-bottom: 30px;     
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  letter-spacing: 1px;    
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#search-container {
+  text-align: center;
+}
+
+#search-container input#keyword {
+  width: 65%;
+  max-width: 480px;
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  display: inline-block;
+}
+
+#search-container input#keyword:focus {
+  border-color: #888;
+}
+
+#search-container button#searchBtn {
+  width: 25%;
+  max-width: 160px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#search-container button#searchBtn:hover {
+  background-color: #333;
+}
+
+@media (max-width: 600px) {
+  #search-container input#keyword,
+  #search-container button#searchBtn {
+    display: block;
+    width: 100%;
+    max-width: none;
+    border-radius: 6px;
+    margin: 8px 0 0 0;
+  }
+  
+  #search-container button#searchBtn {
+    margin-bottom: 20px;
+  }
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 40px auto;
+  max-width: 1000px;      
+  width: 90%;             
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+.product {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  #results {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #results {
+    grid-template-columns: 1fr;
+  }
+}
+#app{
+  background-color: #cccaca;
+}
+
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
